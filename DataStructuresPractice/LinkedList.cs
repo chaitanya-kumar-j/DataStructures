@@ -52,5 +52,37 @@ namespace DataStructuresPractice
                 head.nextNode = temp;
             }
         }
+        public void AddInBetween(int data, int position)
+        {
+            Node newestNode = new Node(data);
+            if(this.head == null)
+            {
+                this.head =  newestNode;
+            }
+            if (position ==0)
+            {
+                newestNode.nextNode = this.head;
+                this.head = newestNode;
+            }
+            Node prev = null;
+            Node current = this.head;
+            int count = 0;
+            while(current!=null && count < position)
+            {
+                prev = current;
+                current = current.nextNode;
+                count++;
+            }
+            newestNode.nextNode = prev.nextNode;
+            prev.nextNode = newestNode;
+        }
+        public void RemoveFirstNode()
+        {
+            if(this.head == null)
+            {
+                head = null;
+            }
+            this.head = this.head.nextNode;
+        }
     }
 }
