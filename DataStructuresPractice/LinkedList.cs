@@ -84,5 +84,19 @@ namespace DataStructuresPractice
             }
             this.head = this.head.nextNode;
         }
+        public void RemoveLastNode()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("List is Empty.");
+                return;
+            }
+            Node temp = head;
+            while (temp.nextNode.nextNode != null)
+            {
+                temp = temp.nextNode;
+            }
+            temp.nextNode = null;
+        }
     }
 }
