@@ -98,20 +98,26 @@ namespace DataStructuresPractice
             }
             temp.nextNode = null;
         }
-        public Node Search(int value)
+        public int Search(int value)
         {
             if (head == null)
             {
-                return null;
+                return 0;
             }
             int count = 0;
-            while (head.data != value)
+            Node temp = this.head;
+            while (temp.data != value)
             {
                 count++;
-                head = head.nextNode;
+                temp = temp.nextNode;
             }
             Console.WriteLine($"Index of the node is:{count} i.e, {count+1} element in list");
-            return head;
+            return count;
+        }
+        public void AddAfterNumber(int oldValue, int newValue)
+        {
+            int position = this.Search(oldValue);
+            this.AddInBetween(newValue, position+1);
         }
     }
 }
