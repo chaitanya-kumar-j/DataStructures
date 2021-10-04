@@ -98,5 +98,20 @@ namespace DataStructuresPractice
             }
             temp.nextNode = null;
         }
+        public Node Search(int value)
+        {
+            if (head == null)
+            {
+                return null;
+            }
+            int count = 0;
+            while (head.data != value)
+            {
+                count++;
+                head = head.nextNode;
+            }
+            Console.WriteLine($"Index of the node is:{count} i.e, {count+1} element in list");
+            return head;
+        }
     }
 }
