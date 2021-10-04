@@ -6,7 +6,13 @@ namespace DataStructuresPractice
     {
         static void Main(string[] args)
         {
-            Console.WriteLine("Hello World!");
+            LinkedList linkedList = new LinkedList();
+            linkedList.AddNode(56);
+            linkedList.AddNode(30);
+            linkedList.AddNode(70);
+
+            linkedList.DisplayList();
+            Console.ReadKey();
         }
     }
 }
