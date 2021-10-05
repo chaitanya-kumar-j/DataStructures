@@ -23,13 +23,19 @@ namespace DataStructuresPractice
             //int a = linkedList.Size();
             //Console.WriteLine(a);
 
-            Stack stack = new Stack();
-            stack.Push(70);
-            stack.Push(30);
-            stack.Push(56);
-            stack.DisplayStack();
-            stack.MakeEmpty();
-            stack.DisplayStack();
+            //Stack stack = new Stack();
+            //stack.Push(70);
+            //stack.Push(30);
+            //stack.Push(56);
+            //stack.DisplayStack();
+            //stack.MakeEmpty();
+            //stack.DisplayStack();
+
+            Queue queue = new Queue();
+            queue.Enqueue(56);
+            queue.Enqueue(30);
+            queue.Enqueue(70);
+            queue.DisplayQueue();
         }
     }
 }
