@@ -28,6 +28,8 @@ namespace DataStructuresPractice
             stack.Push(30);
             stack.Push(56);
             stack.DisplayStack();
+            stack.MakeEmpty();
+            stack.DisplayStack();
         }
     }
 }
