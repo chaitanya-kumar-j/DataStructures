@@ -119,5 +119,30 @@ namespace DataStructuresPractice
             int position = this.Search(oldValue);
             this.AddInBetween(newValue, position+1);
         }
+        public void DeleteInBetween()
+        {
+
+        }
+        public int Size()
+        {
+            int count = 0;
+            while(this.head != null)
+            {
+                count++;
+                head = head.nextNode;
+            }
+            return count;
+        }
+        public void DeleteANumber(int value)
+        {
+            int position = this.Search(value);
+            Node temp = this.head;
+            while (head.data != value)
+            {
+                head.nextNode = head;
+                position--;
+            }
+            head = head.nextNode;
+        }
     }
 }

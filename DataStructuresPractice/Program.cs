@@ -19,6 +19,10 @@ namespace DataStructuresPractice
             // linkedList.Search(30);
             linkedList.AddAfterNumber(30, 40);
             linkedList.DisplayList();
+            // linkedList.DeleteANumber(40);
+            int a = linkedList.Size();
+            Console.WriteLine(a);
+            // linkedList.DisplayList();
         }
     }
 }
