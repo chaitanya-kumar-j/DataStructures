@@ -38,5 +38,21 @@ namespace DataStructuresPractice
                 temp = temp.nextNode;
             }
         }
+        public void Dequeue()
+        {
+            if (head == null)
+            {
+                Console.WriteLine("Queue is Empty");
+                return;
+            }
+            head = head.nextNode;
+        }
+        public void EmptyQueue()
+        {
+            while(head != null)
+            {
+                head = head.nextNode;
+            }
+        }
     }
 }

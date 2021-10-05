@@ -36,6 +36,8 @@ namespace DataStructuresPractice
             queue.Enqueue(30);
             queue.Enqueue(70);
             queue.DisplayQueue();
+            queue.EmptyQueue();
+            queue.DisplayQueue();
         }
     }
 }
